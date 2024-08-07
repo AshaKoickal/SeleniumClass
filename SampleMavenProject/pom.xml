@@ -1,0 +1,52 @@
+<project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>SampleMavenProject</groupId>
+  <artifactId>SampleMavenProject</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+  <dependency><!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi</artifactId>
+    <version>4.1.2</version>
+
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml-schemas -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>4.1.2</version>
+</dependency>
+
+</dependencies>
+
+ <name>jenkins</name> 
+   <build> 
+ 		<plugins> 
+ 			<plugin> 
+ 				<groupId>org.apache.maven.plugins</groupId> 
+ 				<artifactId>maven-compiler-plugin</artifactId> 
+ 				<configuration> 
+ 					<source>1.8</source> 
+ 					<target>1.8</target> 
+ 				</configuration> 
+ 			</plugin> 
+  
+  
+  
+ 			 
+ <plugin> 
+ 				<groupId>org.apache.maven.plugins</groupId> 
+ 				<artifactId>maven-jar-plugin</artifactId> 
+ 				<configuration> 
+ 					<archive> 
+ 						<manifest> 
+ 							<mainClass>collection.Sample</mainClass> 
+ 						</manifest> 
+ 					</archive> 
+ 				</configuration> 
+ 			</plugin> 
+ 		</plugins> 
+ 	</build> 
+ </project>
