@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-09-30T07:20:06 IST" name="Default suite" finished-at="2024-09-30T07:20:07 IST" duration-ms="394">
+    <groups>
+    </groups>
+    <test started-at="2024-09-30T07:20:06 IST" name="Default test" finished-at="2024-09-30T07:20:07 IST" duration-ms="394">
+      <class name="basicTestNg.ScrollTest">
+        <test-method signature="f()[pri:0, instance:basicTestNg.ScrollTest@2a4fb17b]" started-at="2024-09-30T07:20:07 IST" name="f" finished-at="2024-09-30T07:20:07 IST" duration-ms="84" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+      </class> <!-- basicTestNg.ScrollTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

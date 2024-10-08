@@ -55,6 +55,7 @@ obj.listDemo();
 		System.out.println(b);
 		
 	}
+	@SuppressWarnings("rawtypes")
 	public void listDemo()
 	{
 		//add 5 string, size,remove an object, get, addAll, removeAll, contains
@@ -81,6 +82,7 @@ obj.listDemo();
 			System.out.println(itr.next());
 		}
 		itr.remove();
+		
 		System.out.println(collectionObj);
 		//collectionObj.removeAll(collectionObj);
 		//System.out.println(collectionObj);

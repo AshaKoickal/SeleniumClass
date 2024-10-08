@@ -1,0 +1,10 @@
+<suite name="myTestSuite">
+	<test name="myTest">
+		<classes>
+			<class name="basicTestNg.BasicAnnotation"></class>	
+			<class name= "basicTestNg.BasicTestNg"></class>
+			<class name= "basicTestNg.BeforeAndAfterAnnotations"></class>
+			<class name= "basicTestNg.DataProviderTest"></class>
+		</classes>
+	</test>
+</suite>

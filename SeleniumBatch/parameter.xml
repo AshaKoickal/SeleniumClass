@@ -1,0 +1,9 @@
+<suite name="myTestSuite">
+	<test name="myTest">
+	<parameter name="parameter1" value="4"></parameter>
+	<parameter name="parameter2" value="test"></parameter>
+		<classes>
+			<class name="basicTestNg.ParameterTest"></class>			
+		</classes>
+	</test>
+</suite>

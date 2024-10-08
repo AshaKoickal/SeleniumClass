@@ -1,0 +1,16 @@
+<suite name="myTestSuite">
+	<test name="myTest">
+	<groups>
+	<run>
+	<include name="smoke"></include>
+	<exclude name="sanity"></exclude>
+	</run>
+	</groups>
+		<classes>
+			<class name="basicTestNg.BasicAnnotation"></class>	
+			<class name= "basicTestNg.BasicTestNg"></class>
+			<class name= "basicTestNg.BeforeAndAfterAnnotations"></class>
+			<class name= "basicTestNg.DataProviderTest"></class>
+		</classes>
+	</test>
+</suite>
