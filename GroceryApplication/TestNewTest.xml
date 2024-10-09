@@ -1,0 +1,10 @@
+<suite name="GroceryApplication">
+	<test name="chromeTest">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="testCases.SubCategoryTest"></class>
+			
+		</classes>
+	</test>
+	
+</suite>

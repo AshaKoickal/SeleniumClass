@@ -21,6 +21,7 @@ public class AlertHandling {
 		driver.switchTo().alert().accept();*/
 		//dismissing alert
 		WebElement clickMeWarning=driver.findElement(By.xpath("//button[@class='btn btn-warning']"));
+		WebElement clickMeWarning=driver.findElement(By.
 		//WebElement clickMeWarning=driver.findElement(By.);
 		clickMeWarning.click();
 		driver.switchTo().alert().dismiss();

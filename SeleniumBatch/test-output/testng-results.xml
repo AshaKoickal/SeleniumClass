@@ -1,17 +1,252 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="15" passed="15" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-30T07:20:06 IST" name="Default suite" finished-at="2024-09-30T07:20:07 IST" duration-ms="394">
+  <suite started-at="2024-10-10T00:42:03 IST" name="myTestSuite" finished-at="2024-10-10T00:42:03 IST" duration-ms="216">
     <groups>
+      <group name="smoke">
+        <method signature="BasicAnnotation.testCase01()[pri:0, instance:basicTestNg.BasicAnnotation@6989da5e]" name="testCase01" class="basicTestNg.BasicAnnotation"/>
+        <method signature="BeforeAndAfterAnnotations.testCase10()[pri:0, instance:basicTestNg.BeforeAndAfterAnnotations@31190526]" name="testCase10" class="basicTestNg.BeforeAndAfterAnnotations"/>
+        <method signature="DataProviderTest.testCase01(int,int)[pri:0, instance:basicTestNg.DataProviderTest@662ac478]" name="testCase01" class="basicTestNg.DataProviderTest"/>
+        <method signature="BasicTestNg.testCase03()[pri:1, instance:basicTestNg.BasicTestNg@229f66ed]" name="testCase03" class="basicTestNg.BasicTestNg"/>
+      </group> <!-- smoke -->
     </groups>
-    <test started-at="2024-09-30T07:20:06 IST" name="Default test" finished-at="2024-09-30T07:20:07 IST" duration-ms="394">
-      <class name="basicTestNg.ScrollTest">
-        <test-method signature="f()[pri:0, instance:basicTestNg.ScrollTest@2a4fb17b]" started-at="2024-09-30T07:20:07 IST" name="f" finished-at="2024-09-30T07:20:07 IST" duration-ms="84" status="PASS">
+    <test started-at="2024-10-10T00:42:03 IST" name="myTest" finished-at="2024-10-10T00:42:03 IST" duration-ms="216">
+      <class name="basicTestNg.BeforeAndAfterAnnotations">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:basicTestNg.BeforeAndAfterAnnotations@31190526]" started-at="2024-10-10T00:42:03 IST" name="beforeClass" finished-at="2024-10-10T00:42:03 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-      </class> <!-- basicTestNg.ScrollTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:basicTestNg.BeforeAndAfterAnnotations@31190526]" started-at="2024-10-10T00:42:03 IST" name="beforeMethod" finished-at="2024-10-10T00:42:03 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="testCase02()[pri:0, instance:basicTestNg.BeforeAndAfterAnnotations@31190526]" started-at="2024-10-10T00:42:03 IST" name="testCase02" finished-at="2024-10-10T00:42:03 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase02 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:basicTestNg.BeforeAndAfterAnnotations@31190526]" started-at="2024-10-10T00:42:03 IST" name="afterMethod" finished-at="2024-10-10T00:42:03 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:basicTestNg.BeforeAndAfterAnnotations@31190526]" started-at="2024-10-10T00:42:03 IST" name="beforeMethod" finished-at="2024-10-10T00:42:03 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="testCase03()[pri:0, instance:basicTestNg.BeforeAndAfterAnnotations@31190526]" started-at="2024-10-10T00:42:03 IST" name="testCase03" finished-at="2024-10-10T00:42:03 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase03 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:basicTestNg.BeforeAndAfterAnnotations@31190526]" started-at="2024-10-10T00:42:03 IST" name="afterMethod" finished-at="2024-10-10T00:42:03 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:basicTestNg.BeforeAndAfterAnnotations@31190526]" started-at="2024-10-10T00:42:03 IST" name="beforeMethod" finished-at="2024-10-10T00:42:03 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="testCase10()[pri:0, instance:basicTestNg.BeforeAndAfterAnnotations@31190526]" started-at="2024-10-10T00:42:03 IST" name="testCase10" finished-at="2024-10-10T00:42:03 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase10 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:basicTestNg.BeforeAndAfterAnnotations@31190526]" started-at="2024-10-10T00:42:03 IST" name="afterMethod" finished-at="2024-10-10T00:42:03 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:basicTestNg.BeforeAndAfterAnnotations@31190526]" started-at="2024-10-10T00:42:03 IST" name="afterClass" finished-at="2024-10-10T00:42:03 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- basicTestNg.BeforeAndAfterAnnotations -->
+      <class name="basicTestNg.DataProviderTest">
+        <test-method signature="testCase01(int,int)[pri:0, instance:basicTestNg.DataProviderTest@662ac478]" started-at="2024-10-10T00:42:03 IST" name="testCase01" data-provider="data-provider" finished-at="2024-10-10T00:42:03 IST" duration-ms="8" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase01 -->
+        <test-method signature="testCase01(int,int)[pri:0, instance:basicTestNg.DataProviderTest@662ac478]" started-at="2024-10-10T00:42:03 IST" name="testCase01" data-provider="data-provider" finished-at="2024-10-10T00:42:03 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase01 -->
+        <test-method signature="testCase01(int,int)[pri:0, instance:basicTestNg.DataProviderTest@662ac478]" started-at="2024-10-10T00:42:03 IST" name="testCase01" data-provider="data-provider" finished-at="2024-10-10T00:42:03 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[7]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase01 -->
+        <test-method signature="testCase02(int,int,java.lang.String)[pri:0, instance:basicTestNg.DataProviderTest@662ac478]" started-at="2024-10-10T00:42:03 IST" name="testCase02" data-provider="data-provider" finished-at="2024-10-10T00:42:03 IST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[A]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase02 -->
+        <test-method signature="testCase02(int,int,java.lang.String)[pri:0, instance:basicTestNg.DataProviderTest@662ac478]" started-at="2024-10-10T00:42:03 IST" name="testCase02" data-provider="data-provider" finished-at="2024-10-10T00:42:03 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[7]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[B]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase02 -->
+        <test-method signature="testCase02(int,int,java.lang.String)[pri:0, instance:basicTestNg.DataProviderTest@662ac478]" started-at="2024-10-10T00:42:03 IST" name="testCase02" data-provider="data-provider" finished-at="2024-10-10T00:42:03 IST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[7]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[8]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[C]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase02 -->
+      </class> <!-- basicTestNg.DataProviderTest -->
+      <class name="basicTestNg.BasicAnnotation">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:basicTestNg.BasicAnnotation@6989da5e]" started-at="2024-10-10T00:42:03 IST" name="beforeSuite" finished-at="2024-10-10T00:42:03 IST" duration-ms="13" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:basicTestNg.BasicAnnotation@6989da5e]" started-at="2024-10-10T00:42:03 IST" name="beforeTest" finished-at="2024-10-10T00:42:03 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:basicTestNg.BasicAnnotation@6989da5e]" started-at="2024-10-10T00:42:03 IST" name="beforeClass" finished-at="2024-10-10T00:42:03 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:basicTestNg.BasicAnnotation@6989da5e]" started-at="2024-10-10T00:42:03 IST" name="beforeMethod" finished-at="2024-10-10T00:42:03 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="testCase01()[pri:0, instance:basicTestNg.BasicAnnotation@6989da5e]" started-at="2024-10-10T00:42:03 IST" name="testCase01" finished-at="2024-10-10T00:42:03 IST" duration-ms="13" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase01 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:basicTestNg.BasicAnnotation@6989da5e]" started-at="2024-10-10T00:42:03 IST" name="afterMethod" finished-at="2024-10-10T00:42:03 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="testCase02()[pri:0, instance:basicTestNg.BasicAnnotation@6989da5e]" started-at="2024-10-10T00:42:03 IST" name="testCase02" finished-at="2024-10-10T00:42:03 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase02 -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:basicTestNg.BasicAnnotation@6989da5e]" started-at="2024-10-10T00:42:03 IST" name="beforeMethod" finished-at="2024-10-10T00:42:03 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:basicTestNg.BasicAnnotation@6989da5e]" started-at="2024-10-10T00:42:03 IST" name="afterMethod" finished-at="2024-10-10T00:42:03 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:basicTestNg.BasicAnnotation@6989da5e]" started-at="2024-10-10T00:42:03 IST" name="beforeMethod" finished-at="2024-10-10T00:42:03 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="testCase03()[pri:0, instance:basicTestNg.BasicAnnotation@6989da5e]" started-at="2024-10-10T00:42:03 IST" name="testCase03" finished-at="2024-10-10T00:42:03 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase03 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:basicTestNg.BasicAnnotation@6989da5e]" started-at="2024-10-10T00:42:03 IST" name="afterMethod" finished-at="2024-10-10T00:42:03 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:basicTestNg.BasicAnnotation@6989da5e]" started-at="2024-10-10T00:42:03 IST" name="afterClass" finished-at="2024-10-10T00:42:03 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:basicTestNg.BasicAnnotation@6989da5e]" started-at="2024-10-10T00:42:03 IST" name="afterTest" finished-at="2024-10-10T00:42:03 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:basicTestNg.BasicAnnotation@6989da5e]" started-at="2024-10-10T00:42:03 IST" name="afterSuite" finished-at="2024-10-10T00:42:03 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- basicTestNg.BasicAnnotation -->
+      <class name="basicTestNg.BasicTestNg">
+        <test-method signature="testCase02()[pri:0, instance:basicTestNg.BasicTestNg@229f66ed]" started-at="2024-10-10T00:42:03 IST" name="testCase02" finished-at="2024-10-10T00:42:03 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase02 -->
+        <test-method signature="testCase10()[pri:0, instance:basicTestNg.BasicTestNg@229f66ed]" started-at="2024-10-10T00:42:03 IST" name="testCase10" finished-at="2024-10-10T00:42:03 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase10 -->
+        <test-method signature="testCase03()[pri:1, instance:basicTestNg.BasicTestNg@229f66ed]" started-at="2024-10-10T00:42:03 IST" name="testCase03" finished-at="2024-10-10T00:42:03 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCase03 -->
+      </class> <!-- basicTestNg.BasicTestNg -->
+    </test> <!-- myTest -->
+  </suite> <!-- myTestSuite -->
 </testng-results>
