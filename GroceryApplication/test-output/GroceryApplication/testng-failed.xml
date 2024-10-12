@@ -8,7 +8,7 @@
         <methods>
           <include name="afterMethod"/>
           <include name="beforeMethod"/>
-          <include name="addSubCategory"/>
+          <include name="searchSubCategory"/>
         </methods>
       </class> <!-- testCases.SubCategoryTest -->
     </classes>

@@ -19,17 +19,15 @@ public class GeneralUtilities {
 		return selectedElement.getText();
 	}
 	
-	public String selectDropdownWithValue(WebElement element, String select) {
-		Select object = new Select(element);
-		object.selectByValue(select);
-		WebElement selectedElement = object.getFirstSelectedOption();
+	public String selectDropdownWithValue(Select selectObj, String select) {
+		selectObj.selectByValue(select);
+		WebElement selectedElement = selectObj.getFirstSelectedOption();
 		return selectedElement.getText();
 	}
 	
-	public String selectDropdownWithVisibleext(WebElement element, String select) {
-		Select object = new Select(element);
-		object.selectByVisibleText(select);
-		WebElement selectedElement = object.getFirstSelectedOption();
+	public String selectDropdownWithVisibleText(Select selectObj, String select) {
+		selectObj.selectByVisibleText(select);
+		WebElement selectedElement = selectObj.getFirstSelectedOption();
 		return selectedElement.getText();
 	}
 	public void dismissAlert(WebElement alert, WebDriver driver)
