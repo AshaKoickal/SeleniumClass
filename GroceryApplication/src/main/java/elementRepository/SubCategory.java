@@ -1,5 +1,4 @@
 package elementRepository;
-
 import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -14,7 +13,8 @@ public class SubCategory {
 	GeneralUtilities gu = new GeneralUtilities();
 	public String subCategoryName;
 	int counter = 0;
-boolean count=false;
+	boolean count = false;
+
 	public SubCategory(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -44,9 +44,9 @@ boolean count=false;
 	List<WebElement> SubCategoryColumn;
 	@FindBy(xpath = "//a[contains(@href,'javascript:void(0)')]")
 	WebElement search;
-	@FindBy(xpath="//input[@name='ut']")
+	@FindBy(xpath = "//input[@name='ut']")
 	WebElement subCategorySearch;
-	@FindBy(xpath="//select[@name='un']")
+	@FindBy(xpath = "//select[@name='un']")
 	WebElement CategorySearch;
 
 	public void NavigateToPageandValidate() {
@@ -102,52 +102,61 @@ boolean count=false;
 			}
 		}
 	}
-	
-	public String readTableElement(int row,int column)
-	{  
+	/* chaining of methods
+	 * public subCategoryTableRowDeletion subCategoryTableRowDeletion() {
+		List<WebElement> subCategoryTableRows = driver.findElements(
+				By.xpath("//table[@class='table table-bordered table-hover table-sm']//tbody//tr//td[1]"));
+		for (int i = 0; i < subCategoryTableRows.size(); i++) {
+			if (subCategoryTableRows.get(i).getText().equals(subCategoryName)) {
+				List<WebElement> deletetionbuttons = driver.findElements(By.xpath(
+						"//a[contains(@href,'https://groceryapp.uniqassosiates.com/admin/Subcategory/delete?del')]"));
+				deletetionbuttons.get(i).click();
+				break;
+				}
+				return this;		
+		}
+	 */
 
-	String path="//table[@class='table table-bordered table-hover table-sm']//tbody//tr["+row+"]//td["+column+"]";
-	WebElement element=driver.findElement(By.xpath(path));
-	return element.getText();
+	public String readTableElement(int row, int column) {
+		String path = "//table[@class='table table-bordered table-hover table-sm']//tbody//tr[" + row + "]//td["
+				+ column + "]";
+		WebElement element = driver.findElement(By.xpath(path));
+		return element.getText();
 	}
 
 	public void deleteTableElement(String Category, String subcategory) {
 		for (int i = 0; i < SubCategoryColumn.size(); i++) {
 			if (SubCategoryColumn.get(i).getText().equals(subcategory)) {
-				
-				String CategoryValuepath = "//table[@class='table table-bordered table-hover table-sm']//tbody//tr[" +(i+1)+ "]//td[2]";
-				WebElement CategoryColumn=driver.findElement(By.xpath(CategoryValuepath));
-				if(Category==CategoryColumn.getText())
-				{
-				String path = "//table[@class='table table-bordered table-hover table-sm']//tbody//tr[" + (i + 1)
-						+ "]//td[5]//a[2]";
-				WebElement element = driver.findElement(By.xpath(path));
-				element.click();
-				driver.switchTo().alert().accept();
-				break;
+
+				String CategoryValuepath = "//table[@class='table table-bordered table-hover table-sm']//tbody//tr["
+						+ (i + 1) + "]//td[2]";
+				WebElement CategoryColumn = driver.findElement(By.xpath(CategoryValuepath));
+				if (Category == CategoryColumn.getText()) {
+					String path = "//table[@class='table table-bordered table-hover table-sm']//tbody//tr[" + (i + 1)
+							+ "]//td[5]//a[2]";
+					WebElement element = driver.findElement(By.xpath(path));
+					element.click();
+					driver.switchTo().alert().accept();
+					break;
 				}
 			}
 		}
 	}
-	
-	
-	
+
 	public boolean checkSubCategoryExist(String subcategory) {
 		for (int i = 0; i < SubCategoryColumn.size(); i++) {
 			if (SubCategoryColumn.get(i).getText().equals(subcategory)) {
-				count=true;
-			}			
+				count = true;
+			}
 		}
 		return count;
 	}
-	
-	public void searchSubCategory(String subCategoryToSearch,String CategoryToSearch)
-	{
-	search.click();
-	Select categorySearchObj = new Select(CategorySearch);
-	gu.selectDropdownWithVisibleText(categorySearchObj, CategoryToSearch);
-	subCategorySearch.sendKeys(subCategoryToSearch);
-	subCategorySearchButton.click();
-	
+
+	public void searchSubCategory(String subCategoryToSearch, String CategoryToSearch) {
+		search.click();
+		Select categorySearchObj = new Select(CategorySearch);
+		gu.selectDropdownWithVisibleText(categorySearchObj, CategoryToSearch);
+		subCategorySearch.sendKeys(subCategoryToSearch);
+		subCategorySearchButton.click();
 	}
 }

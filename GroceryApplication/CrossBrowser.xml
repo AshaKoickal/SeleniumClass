@@ -1,5 +1,11 @@
-<suite name="GroceryApplication">
+<suite name="GroceryApplication" parallel ="tests" thread-count="2">  
 	<test name="chromeTest">
+<listeners>
+	<listener class-name="utilities.ExtenetReport">
+	</listener>
+	<listener class-name="utilities.RetryListener">
+	</listener>
+	</listeners>
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="testCases.LoginPageTest"></class>
@@ -7,6 +13,12 @@
 		</classes>
 	</test>
 	<test name="firefoxTest">
+	<listeners>
+	<listener class-name="utilities.ExtenetReport">
+	</listener>
+	<listener class-name="utilities.RetryListener">
+	</listener>
+	</listeners>
 		<parameter name="browser" value="firefox"></parameter>
 		<classes>
 			<class name="testCases.LoginPageTest"></class>

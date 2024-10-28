@@ -14,7 +14,7 @@ public class ExcelCode {
 	static XSSFSheet sheet;
 	public static String getStringData(int i,int j) throws IOException
 	{
-		file =new FileInputStream();
+		file =new FileInputStream("");
 		wb= new XSSFWorkbook(file);
 		sheet =wb.getSheet("Sheet1");
 		XSSFRow r=sheet.getRow(i);
@@ -24,7 +24,7 @@ public class ExcelCode {
 	public static String getIntegerData(int i, int j) throws IOException
 	{
 		
-		file =new FileInputStream();
+		file =new FileInputStream("/");
 		wb= new XSSFWorkbook(file);
 		sheet =wb.getSheet("Sheet1");
 		XSSFRow r=sheet.getRow(i);
