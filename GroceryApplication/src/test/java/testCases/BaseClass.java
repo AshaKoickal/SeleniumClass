@@ -24,7 +24,7 @@ public class BaseClass {
 
 	public String getCredentialFromExcel(int rowNum, int columNum) throws IOException {
 		String path = System.getProperty("user.dir") + "\\src\\main\\resources\\Excel\\LoginData.xlsx";
-		return ExcelUtilities.getLoginData(rowNum, columNum, path);
+		return ExcelUtilities.getLoginData(rowNum, columNum , path);
 	}
 
 	public static void testBasic() throws IOException {
