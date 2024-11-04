@@ -29,7 +29,8 @@ public class ManageNews {
 	WebElement newsSearch;
 	@FindBy(xpath = "//button[@class='btn btn-danger btn-fix']")
 	WebElement newsSearchButton;
-int counter=0;
+	int counter = 0;
+
 	public ManageNews(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -40,7 +41,6 @@ int counter=0;
 	}
 
 	public boolean addNews(String news) {
-		navigateToNewsLink();
 		newButton.click();
 		newsTextArea.sendKeys(news);
 		saveButton.click();
@@ -51,13 +51,11 @@ int counter=0;
 	}
 
 	public void searchNews(String news) {
-		navigateToNewsLink();
 		searchButton.click();
 		newsSearch.sendKeys(news);
 		newsSearchButton.click();
 	}
 
-	
 	public boolean validateNewsEntry(String newsToBeSearched) {
 		List<WebElement> NewsTableRows = driver.findElements(
 				By.xpath("//table[@class='table table-bordered table-hover table-sm']//tbody//tr//td[1]"));
@@ -68,13 +66,13 @@ int counter=0;
 					break;
 				} else {
 					counter = 0;
-				}	
-			}		
+				}
+			}
 		}
 		boolean counterVal = counter == 0 ? true : false;
 		return counterVal;
-}
-	
+	}
+
 	public boolean deleteNewsEntry(String newsToBeDeleted) {
 		List<WebElement> NewsTableRows = driver.findElements(
 				By.xpath("//table[@class='table table-bordered table-hover table-sm']//tbody//tr//td[1]"));
@@ -84,13 +82,13 @@ int counter=0;
 					List<WebElement> deletetionbuttons = driver.findElements(By.xpath(
 							"//a[contains(@href,'https://groceryapp.uniqassosiates.com/admin/news/delete?del')]"));
 					deletetionbuttons.get(i).click();
+					driver.switchTo().alert().dismiss();
 					break;
-				}	
-			}		
+				}
+			}
 		}
 		boolean counterVal = counter == 0 ? true : false;
 		return counterVal;
-}
-	
-	
+	}
+
 }

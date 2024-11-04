@@ -1,4 +1,5 @@
 package elementRepository;
+
 import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -54,8 +55,6 @@ public class SubCategory {
 	}
 
 	public void addSubCategory() {
-		// String subCategoryName="Test"+gu.generateCurrentDateAndTime();
-		// this.subCategoryName=subCategoryName;
 		newButton.click();
 		Select selectObj = new Select(CategoryDropDown);
 		gu.selectDropdownWithIndex(selectObj, 1);
@@ -102,20 +101,6 @@ public class SubCategory {
 			}
 		}
 	}
-	/* chaining of methods
-	 * public subCategoryTableRowDeletion subCategoryTableRowDeletion() {
-		List<WebElement> subCategoryTableRows = driver.findElements(
-				By.xpath("//table[@class='table table-bordered table-hover table-sm']//tbody//tr//td[1]"));
-		for (int i = 0; i < subCategoryTableRows.size(); i++) {
-			if (subCategoryTableRows.get(i).getText().equals(subCategoryName)) {
-				List<WebElement> deletetionbuttons = driver.findElements(By.xpath(
-						"//a[contains(@href,'https://groceryapp.uniqassosiates.com/admin/Subcategory/delete?del')]"));
-				deletetionbuttons.get(i).click();
-				break;
-				}
-				return this;		
-		}
-	 */
 
 	public String readTableElement(int row, int column) {
 		String path = "//table[@class='table table-bordered table-hover table-sm']//tbody//tr[" + row + "]//td["

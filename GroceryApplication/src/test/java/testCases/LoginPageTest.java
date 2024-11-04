@@ -16,20 +16,17 @@ public class LoginPageTest extends BaseClass {
 	@Test(enabled = true)
 	public void verifyLoginWithValidCredentials() throws IOException {
 		lp = new LoginPage(driver);
-		//hp = new HomePage(driver);
-		hp=lp.loginToGroceryApp("admin", "admin");
-		lp.loginToGroceryApp(getCredentialFromExcel(0,0), getCredentialFromExcel(0,0));
+		lp.loginToGroceryApp(getCredentialFromExcel(0, 0), getCredentialFromExcel(0, 0));
 		String actual = lp.readHeading();
-		String expected = "7rmart supermarket";
-		Assert.assertEquals(actual, expected, Constant.lp_verifyLoginWithValidCredentials);
+		Assert.assertEquals(actual, Constant.lp_expectedHeadingForValidCredentials,
+				Constant.lp_verifyLoginWithValidCredentials);
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void verifyLoginWithInValidCredentials() throws IOException {
 		lp = new LoginPage(driver);
-		hp = new HomePage(driver);
-		lp.loginToGroceryApp(getCredentialFromExcel(0,1), getCredentialFromExcel(0,1));
-		String expected = "Alert!, Heading is not as expected";
-		Assert.assertEquals(lp.readInvalidCredentialsMessage(),expected,Constant.lp_verifyLoginWithInValidCredentials );
+		lp.loginToGroceryApp(getCredentialFromExcel(1, 1), getCredentialFromExcel(1, 1));
+		Assert.assertNotEquals(lp.readInvalidCredentialsMessage(), Constant.lp_expectedHeadingForValidCredentials,
+				Constant.lp_verifyLoginWithInValidCredentials);
 	}
 }

@@ -1,5 +1,11 @@
 <suite name="GroceryApplication" parallel ="tests" thread-count="2">  
 	<test name="chromeTest">
+	<groups>
+	<run>
+	<include name="smoke"></include>
+	<exclude name="sanity"></exclude>
+	</run>
+	</groups>
 <listeners>
 	<listener class-name="utilities.ExtenetReport">
 	</listener>
@@ -9,7 +15,9 @@
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="testCases.LoginPageTest"></class>
-			<class name="testCases.HomePageTest"></class>
+			<class name="testCases.ManageContactTest"></class>
+			<class name="testCases.ManageNewsTest"></class>
+			<class name="testCases.SubCategoryTest"></class>
 		</classes>
 	</test>
 	

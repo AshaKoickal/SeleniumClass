@@ -61,7 +61,6 @@ public class GeneralUtilities {
 
 	public int randon(int limit) {
 		Random random = new Random();
-		// int limit = 1000;
 		int randomNumber = random.nextInt(limit);
 		return randomNumber;
 	}
@@ -85,11 +84,9 @@ public class GeneralUtilities {
 	public void replaceText(WebElement element, String textToBeReplaced) {
 		element.clear();
 		element.sendKeys(textToBeReplaced);
-		//element.getText().replace(element.getText(), textToBeReplaced);
 	}
 
 	public boolean verifyPage(String expectedPageHeading, String actualPageHeading) {
-		// Assert.assertEquals(actual, expected, "Heading is as expected");
 		if (expectedPageHeading == actualPageHeading) {
 			return true;
 		} else {
@@ -101,5 +98,10 @@ public class GeneralUtilities {
 	{
 		JavascriptExecutor js=(JavascriptExecutor)driver;
 		js.executeScript("window.scrollBy(0,350)","");
+	}
+	
+	public void clickJavaScriptExecutor(WebElement element, WebDriver driver) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click()", element);
 	}
 }

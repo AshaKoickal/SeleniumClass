@@ -9,7 +9,9 @@
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="testCases.LoginPageTest"></class>
-			<class name="testCases.HomePageTest"></class>
+			<class name="testCases.ManageContactTest"></class>
+			<class name="testCases.ManageNewsTest"></class>
+			<class name="testCases.SubCategoryTest"></class>
 		</classes>
 	</test>
 	<test name="firefoxTest">
@@ -22,7 +24,9 @@
 		<parameter name="browser" value="firefox"></parameter>
 		<classes>
 			<class name="testCases.LoginPageTest"></class>
-			<class name="testCases.HomePageTest"></class>
+			<class name="testCases.ManageContactTest"></class>
+			<class name="testCases.ManageNewsTest"></class>
+			<class name="testCases.SubCategoryTest"></class>
 		</classes>
 	</test>
 </suite>

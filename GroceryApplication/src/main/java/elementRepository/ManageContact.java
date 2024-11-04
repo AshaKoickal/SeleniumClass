@@ -52,7 +52,7 @@ public class ManageContact {
 	}
 
 	public boolean validateDetails() {
-		if (driver.getCurrentUrl().equals("https://groceryapp.uniqassosiates.com/admin/contact/edit_contact?edit=2"))
+		if (driver.getCurrentUrl().equals("https://groceryapp.uniqassosiates.com/admin/contact/edit_contact?edit=1"))
 			return true;
 		else
 			return false;

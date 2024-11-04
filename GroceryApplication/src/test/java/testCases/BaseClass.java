@@ -1,20 +1,16 @@
 package testCases;
 
-import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
-
 import utilities.ExcelUtilities;
 import utilities.ScreenShotCapture;
 
@@ -24,7 +20,7 @@ public class BaseClass {
 
 	public String getCredentialFromExcel(int rowNum, int columNum) throws IOException {
 		String path = System.getProperty("user.dir") + "\\src\\main\\resources\\Excel\\LoginData.xlsx";
-		return ExcelUtilities.getLoginData(rowNum, columNum , path);
+		return ExcelUtilities.getLoginData(rowNum, columNum, path);
 	}
 
 	public static void testBasic() throws IOException {
@@ -45,43 +41,19 @@ public class BaseClass {
 		} else if (browserName.equals("firefox")) {
 			driver = new FirefoxDriver();
 		}
-		//driver.get("https://groceryapp.uniqassosiates.com/admin");
 		driver.get(pro.getProperty("baseUrl"));
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	}
-	
+
 	@AfterMethod(alwaysRun = true)
 
 	public void afterMethode(ITestResult iTestResult) throws IOException {
 
 		if (iTestResult.getStatus() == ITestResult.FAILURE) {
-
 			sc = new ScreenShotCapture();
-
 			sc.captureFailureScreenShot(driver, iTestResult.getName());
-
 		}
-
-		//driver.quit();
-
+		driver.quit();
 	}
-
-
-
-	/*@AfterMethod(alwaysRun = true)
-	public void afterMethod(ITestResult iTestResult) throws IOException {
-
-		if (iTestResult.getStatus() == ITestResult.FAILURE) {
-
-			sc = new ScreenShotCapture();
-
-			sc.captureFailureScreenShot(driver, iTestResult.getName());
-
-		}
-
-	//	driver.quit();
-
-	}*/
-
 }
