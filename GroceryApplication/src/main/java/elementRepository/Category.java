@@ -52,6 +52,6 @@ public class Category {
 	
 	public String validateCategoryDetails()
 	{
-		return 
+		return successAlert.getText();
 	}
 }
